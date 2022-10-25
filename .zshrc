@@ -114,3 +114,12 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# Aliases
+alias vim="nvim"
+alias v="nvim"
+alias n="nvim"
+
+# Directorys 
+alias gh="cd ~/Documents/github/"
+alias home="cd ~/"

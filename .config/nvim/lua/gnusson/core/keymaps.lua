@@ -3,6 +3,14 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+-- Modes --
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
 ---------------------
 -- General Keymaps
 ---------------------
@@ -15,6 +23,12 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- delete single character without copying into register --
 keymap.set("n", "x", '"_x')
+
+-- move text upp and down --
+keymap.set("n", "<A-j>", ":m .+1<CR>") -- up
+keymap.set("n", "<A-k>", ":m .-2<CR>") -- down
+keymap.set("x", "<A-j>", ":m '>+1<CR>gv=gv") -- up
+keymap.set("x", "<A-k>", ":m '<-2<CR>gv=gv") -- down
 
 -- increment/decrement numbers --
 keymap.set("n", "<leader>+", "<C-a>") -- increment
@@ -30,6 +44,11 @@ keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tw", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
+
+-- buffers --
+keymap.set("n", "<leader>bw", ":bd<CR>:bNext<CR>") -- close buffer
+keymap.set("n", "<leader>bn", ":bNext<CR>") -- next buffer
+keymap.set("n", "<leader>bp", ":bprevious<CR>") -- previous buffer
 
 ----------------------
 -- Plugin Keybinds

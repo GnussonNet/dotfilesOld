@@ -1,21 +1,21 @@
 -- import nvim-cmp plugin safely --
 local cmp_status, cmp = pcall(require, "cmp")
 if not cmp_status then
-	print("Cmp not found!")							                  -- print error if plugin not installed
+	print("Cmp not found!") -- print error if plugin not installed
 	return
 end
 
 -- import luasnip plugin safely --
 local luasnip_status, luasnip = pcall(require, "luasnip")
 if not luasnip_status then
-	print("Luasnip not found!")	              						-- print error if plugin not installed
+	print("Luasnip not found!") -- print error if plugin not installed
 	return
 end
 
 -- import lspkind plugin safely --
 local lspkind_status, lspkind = pcall(require, "lspkind")
 if not lspkind_status then
-	print("Lspkind not found!")             							-- print error if plugin not installed
+	print("Lspkind not found!") -- print error if plugin not installed
 	return
 end
 
@@ -37,16 +37,16 @@ cmp.setup({
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-k>"] = cmp.mapping.select_prev_item(), 					-- previous suggestion
-		["<C-j>"] = cmp.mapping.select_next_item(), 					-- next suggestion
+		["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+		["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete(), 							-- show completion suggestions
-		["<C-e>"] = cmp.mapping.abort(), 											-- close completion window
+		["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+		["<C-e>"] = cmp.mapping.abort(), -- close completion window
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 
 		-- super tab functionality --
-		["<Tab>"] = cmp.mapping(function(fallback) 						-- use tab for next suggestion
+		["<Tab>"] = cmp.mapping(function(fallback) -- use tab for next suggestion
 			if cmp.visible() then
 				cmp.select_next_item()
 			elseif luasnip.expand_or_jumpable() then
@@ -58,7 +58,7 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 
-		["<S-Tab>"] = cmp.mapping(function(fallback) 					-- use shift-tab for prev suggestion
+		["<S-Tab>"] = cmp.mapping(function(fallback) -- use shift-tab for prev suggestion
 			if cmp.visible() then
 				cmp.select_prev_item()
 			elseif luasnip.jumpable(-1) then
@@ -70,10 +70,10 @@ cmp.setup({
 	}),
 	-- sources for autocompletion --
 	sources = cmp.config.sources({
-		{ name = "nvim_lsp" }, 																-- lsp
-		{ name = "luasnip" },											 						-- snippets
-		{ name = "buffer" }, 																	-- text within current buffer
-		{ name = "path" }, 																		-- file system paths
+		{ name = "nvim_lsp" }, -- lsp
+		{ name = "luasnip" }, -- snippets
+		{ name = "buffer" }, -- text within current buffer
+		{ name = "path" }, -- file system paths
 	}),
 	-- configure lspkind for vs-code like icons --
 	formatting = {
