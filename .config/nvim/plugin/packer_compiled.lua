@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["mini.animate"] = {
+    loaded = true,
+    path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/mini.animate",
+    url = "https://github.com/echasnovski/mini.animate"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/null-ls.nvim",

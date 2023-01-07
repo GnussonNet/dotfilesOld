@@ -59,6 +59,9 @@ return packer.startup(function(use)
 	-- vs-code like icons --
 	use("kyazdani42/nvim-web-devicons")
 
+	-- cursor animation --
+	use("echasnovski/mini.animate")
+
 	-- statusline --
 	use("nvim-lualine/lualine.nvim")
 
