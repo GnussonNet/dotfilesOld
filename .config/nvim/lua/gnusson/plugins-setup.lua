@@ -51,7 +51,7 @@ return packer.startup(function(use)
 	use("vim-scripts/ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc --
-	use("numToStr/Comment.nvim")
+	use({ "numToStr/Comment.nvim", branch = "jsx" })
 
 	-- file explorer --
 	use("nvim-tree/nvim-tree.lua")

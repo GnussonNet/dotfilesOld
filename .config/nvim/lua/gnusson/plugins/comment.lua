@@ -6,4 +6,8 @@ if not setup then
 end
 
 -- enable comment --
-comment.setup()
+comment.setup({
+	pre_hook = function(ctx)
+		return require("Comment.jsx").calculate(ctx)
+	end,
+})
