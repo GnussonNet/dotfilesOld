@@ -97,6 +97,28 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 	use("https://git.sr.ht/~whynothugo/lsp_lines.nvim") -- diagnostic virtual lines
 
+	-- todo highlightning --
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
+
+	-- custom notifications --
+	use("rcarriga/nvim-notify")
+
+	-- used for noice --
+	use("MunifTanjim/nui.nvim")
+
+	-- ui messages, cmdline and popupmenu --
+	use({
+		"folke/noice.nvim",
+		requires = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+	})
+
 	-- formatting & linting --
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
