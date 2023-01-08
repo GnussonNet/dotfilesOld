@@ -62,6 +62,9 @@ return packer.startup(function(use)
 	-- cursor animation --
 	use("echasnovski/mini.animate")
 
+	-- show indentions --
+	use("lukas-reineke/indent-blankline.nvim")
+
 	-- statusline --
 	use("nvim-lualine/lualine.nvim")
 
