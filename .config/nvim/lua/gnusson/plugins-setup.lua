@@ -103,7 +103,7 @@ return packer.startup(function(use)
 	-- custom notifications --
 	use("rcarriga/nvim-notify")
 
-	-- used for noice --
+	-- used for noice, searchbox and chatGTP --
 	use("MunifTanjim/nui.nvim")
 
 	-- ui messages, cmdline and popupmenu --
@@ -116,6 +116,22 @@ return packer.startup(function(use)
 			--   `nvim-notify` is only needed, if you want to use the notification view.
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
+		},
+	})
+
+	use({
+		"VonHeikemen/searchbox.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
+
+	use({
+		"jackMort/ChatGPT.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
 		},
 	})
 

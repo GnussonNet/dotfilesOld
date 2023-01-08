@@ -24,6 +24,10 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 -- delete single character without copying into register --
 keymap.set("n", "x", '"_x')
 
+-- search and replace --
+keymap.set("n", "<leader>s", ":SearchBoxIncSearch<CR>")
+keymap.set("n", "<leader>sr", ":SearchBoxReplace confirm=menu<CR>")
+
 -- move text upp and down --
 keymap.set("n", "<A-j>", ":m .+1<CR>") -- up
 keymap.set("n", "<A-k>", ":m .-2<CR>") -- down

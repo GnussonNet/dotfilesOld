@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["ChatGPT.nvim"] = {
+    loaded = true,
+    path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/ChatGPT.nvim",
+    url = "https://github.com/jackMort/ChatGPT.nvim"
+  },
   ["Comment.nvim"] = {
     loaded = true,
     path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/Comment.nvim",
@@ -243,6 +248,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["searchbox.nvim"] = {
+    loaded = true,
+    path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/searchbox.nvim",
+    url = "https://github.com/VonHeikemen/searchbox.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
