@@ -65,6 +65,9 @@ return packer.startup(function(use)
 	-- show indentions --
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- notes/todo list --
+	use({ "phaazon/mind.nvim", branch = "v2.2" })
+
 	-- statusline --
 	use("nvim-lualine/lualine.nvim")
 
