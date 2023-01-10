@@ -150,6 +150,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- rainbow brackets --
+	use("mrjones2014/nvim-ts-rainbow")
+
 	-- auto closing --
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use("windwp/nvim-ts-autotag") -- autoclose tags
