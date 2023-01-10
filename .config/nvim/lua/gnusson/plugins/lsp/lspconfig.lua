@@ -19,10 +19,24 @@ if not typescript_setup then
 	return
 end
 
+-- import lsp_signature plugin safely --
+local lspsignature_setup, lspsignature = pcall(require, "lsp_signature")
+if not lspsignature_setup then
+	print("Lspsignature not found found!") -- print error if plugin not installed
+	return
+end
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available --
 local on_attach = function(client, bufnr)
+	require("lsp_signature").on_attach({
+		bind = true, -- This is mandatory, otherwise border config won't get registered.
+		handler_opts = {
+			border = "rounded",
+		},
+	}, bufnr)
+
 	-- keybind options --
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -103,4 +117,8 @@ lspconfig["sumneko_lua"].setup({
 			},
 		},
 	},
+})
+
+lspconfig["lspsignature"].setup({
+	always_trigger = true,
 })
