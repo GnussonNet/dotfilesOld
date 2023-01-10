@@ -65,6 +65,9 @@ return packer.startup(function(use)
 	-- show indentions --
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- highligt all word on cursor --
+	use("RRethy/vim-illuminate")
+
 	-- notes/todo list --
 	use("phaazon/mind.nvim")
 
