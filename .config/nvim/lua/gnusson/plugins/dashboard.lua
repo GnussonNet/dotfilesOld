@@ -21,8 +21,8 @@ dashboard.custom_center = {
 	{
 		icon = "  ",
 		desc = "File Browser                            ",
-		action = "Telescope file_browser",
-		shortcut = "<leader> f b",
+		action = "NvimTreeToggle",
+		shortcut = "<leader> e  ",
 	},
 	{
 		icon = "  ",
@@ -32,7 +32,7 @@ dashboard.custom_center = {
 	},
 	{
 		icon = "  ",
-		desc = "Open Personal dotfiles                  ",
+		desc = "Open dotfiles                  ",
 		action = "Telescope dotfiles path=/.config/nvim/",
 		shortcut = "<leader> f d",
 	},
