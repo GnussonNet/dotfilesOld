@@ -66,7 +66,24 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- highligt all word on cursor --
-	use("RRethy/vim-illuminate")
+	use({
+		"RRethy/vim-illuminate",
+		config = function()
+			require("illuminate").configure({
+				filetypes_denylist = {
+					"dashboard",
+					"NvimTree",
+					"packer",
+					"mason",
+				},
+				providers = {
+					"lsp",
+					"treesitter",
+					"regex",
+				},
+			})
+		end,
+	})
 
 	-- notes/todo list --
 	use("phaazon/mind.nvim")

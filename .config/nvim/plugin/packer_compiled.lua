@@ -295,6 +295,7 @@ _G.packer_plugins = {
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
   ["vim-illuminate"] = {
+    config = { "\27LJ\2\n­\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14providers\1\4\0\0\blsp\15treesitter\nregex\23filetypes_denylist\1\0\0\1\5\0\0\14dashboard\rNvimTree\vpacker\nmason\14configure\15illuminate\frequire\0" },
     loaded = true,
     path = "/Users/gnusson/.local/share/nvim/site/pack/packer/start/vim-illuminate",
     url = "https://github.com/RRethy/vim-illuminate"
@@ -322,6 +323,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: vim-illuminate
+time([[Config for vim-illuminate]], true)
+try_loadstring("\27LJ\2\n­\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14providers\1\4\0\0\blsp\15treesitter\nregex\23filetypes_denylist\1\0\0\1\5\0\0\14dashboard\rNvimTree\vpacker\nmason\14configure\15illuminate\frequire\0", "config", "vim-illuminate")
+time([[Config for vim-illuminate]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
